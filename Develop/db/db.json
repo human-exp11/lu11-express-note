@@ -5,4 +5,3 @@
     }
 ]
 
-// db.json file that will be used to store and retrieve notes using the `fs` module.
