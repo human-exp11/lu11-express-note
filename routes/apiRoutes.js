@@ -1,5 +1,4 @@
 const router = require('express').Router();
-
 const path = require('path');
 const id = require('uniqid'); 
 const fs = require('fs');
@@ -8,9 +7,13 @@ const fs = require('fs');
 
 // getting logged notes
 router.get('/notes', (req, res) => {
-    const log = require('../db/db.json');
-    res.send(log)
-})
+    const log = fs.readFileSync("./db/db.json");
+    res.json(JSON.parse(log));
+    console.log(log);
+    // res.json(log);
+    // const log = require('../db/db.json');
+    // res.send(log)
+});
 
 
 //posting notes
@@ -43,6 +46,5 @@ router.delete('/notes/:id', (req, res) => {
         res.status(500).send(err);
     }
 })
-
 
 module.exports = router;
