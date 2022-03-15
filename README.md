@@ -44,7 +44,7 @@ THEN that specific note is deleted from the list of notes √
 ---
 
 ## Screenshot
-*![screenshot] 
+*![screenshot](lu11-express-note\ss-image\notess.png)
 
 ---
 
